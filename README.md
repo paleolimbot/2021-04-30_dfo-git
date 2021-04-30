@@ -1,6 +1,3 @@
----
-output: github_document
----
 
 # 2021-04-30 R Learning and Development Git/GitHub practice
 
@@ -40,4 +37,20 @@ Paste the value under *Repository URL* and click *Create Project*.
 
 ## Commit
 
-Open *argo-report.Rmd* and follow the instructions at the top of the page. Click on the *Git* tab at the top right of the RStudio window.
+Open *argo-report.Rmd* and follow the instructions at the top of the page. Click on the *Git* tab at the top right of the RStudio window. You should see a window that looks like this:
+
+![](screenshot/commit.png)
+
+Check the boxes next to all the files and click *Commit*. You should have a window pop up that gives you an opportunity to add a small message. Type something in the box and click *Commit*.
+
+![](screenshot/commit-2.png)
+
+## Push
+
+After you have committed your change, push it back to GitHub using the green arrow in the *Git* pane. If your computer has already been set up to work with GitHub, you shuld see the following window:
+
+![](screenshot/push.png)
+
+If not, you'll see some kind of error message and you will need to set this up. There are excellent instructions on how to do this in [Chapter 10 of Happy Git With R by Jenny Bryan](https://happygitwithr.com/credential-caching.html#how-to-get-a-pat) but don't be afraid to ask for help getting this to work!
+
+Visit your repository page on GitHub (https://github.com/YOUR_USER_NAME/2021-04-30_dfo-git) and click on *argo-report.md*. Your updated rendered document should be there!
