@@ -1,29 +1,14 @@
----
-output: github_document
----
 
-When you've opened this document, remove this text and click "Knit" above to re-render the document! You may have to install one or more packages to re-render the document.
+When you’ve opened this document, remove this text and click “Knit”
+above to re-render the document\!
 
-```{r setup, include=FALSE}
-# if not installed:
-# install.packages(c("ggplot2", "ggspatial", "lubridate", "rnaturalearth", "rnaturalearthdata", "sf"))
-library(ggplot2)
-library(ggspatial)
-library(lubridate)
-library(rnaturalearth)
-library(rnaturalearthdata)
-library(sf)
-
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-```{r}
+``` r
 prof_meta <- read.csv("argo_profile_meta.csv")
 prof <- read.csv("argo_profiles.csv")
 countries <- ne_countries(returnclass = "sf")
 ```
 
-```{r argo-prof-map, message=FALSE}
+``` r
 ggplot(prof_meta) +
   annotation_spatial(countries) +
   shadow_spatial(
@@ -38,7 +23,9 @@ ggplot(prof_meta) +
   theme_void()
 ```
 
-```{r argo-temp, warning=FALSE}
+![](argo-report_files/figure-gfm/argo-prof-map-1.png)<!-- -->
+
+``` r
 ggplot(prof, aes(y = pres, x = temp)) +
   geom_line(
     aes(group = interaction(file, n_prof)),
@@ -51,7 +38,9 @@ ggplot(prof, aes(y = pres, x = temp)) +
   theme(strip.background = element_blank())
 ```
 
-```{r argo-psal, warning = FALSE}
+![](argo-report_files/figure-gfm/argo-temp-1.png)<!-- -->
+
+``` r
 ggplot(prof, aes(y = pres, x = psal)) +
   geom_line(
     aes(group = interaction(file, n_prof)),
@@ -63,3 +52,5 @@ ggplot(prof, aes(y = pres, x = psal)) +
   theme_bw() +
   theme(strip.background = element_blank())
 ```
+
+![](argo-report_files/figure-gfm/argo-psal-1.png)<!-- -->
