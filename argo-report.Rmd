@@ -2,27 +2,10 @@
 output: github_document
 ---
 
-# 2021-04-30 R Learning and Development Git/GitHub practice
-
-Today's exercise is a collection of common actions for using Git and GitHub from RStudio. The actions we will practice are:
-
-- **Fork** a repository (make a copy of somebody else's repository on your own account). To do this you will need to [create a GitHub account](https://github.com/join) if you haven't already.
-- **Clone** a repository (make a local copy of a GitHub repository on your computer so you can edit the files). Do to this you will need to [install Git](https://happygitwithr.com/install-git.html#install-git-windows) if you haven't already and make sure RStudio knows that Git exists on your system.
-- **Commit** a change to one or more files in the repository.
-- **Push** your changes back to GitHub. This includes [setting up RStudio to talk to GitHub](https://happygitwithr.com/credential-caching.html#how-to-get-a-pat) if you haven't already!
-
-
-## Fork
-
-In order to practice using Git/GitHub, you will need a repository to work from! You could [create a blank new repository to work with](https://github.com/new) but I think it's more exciting to start with a repo that has some content. You can use this one! To get started, click the "Fork" button at the top of this page.
-
-
-
-
-
+When you've opened this document, remove this text and click "Knit" above to re-render the document!
 
 ```{r setup, include=FALSE}
-# if not installed
+# if not installed:
 # install.packages(c("ggplot2", "ggspatial", "lubridate", "rnaturalearth", "rnaturalearthdata", "sf"))
 library(ggplot2)
 library(ggspatial)
