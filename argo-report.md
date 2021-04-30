@@ -1,6 +1,11 @@
 
 When you’ve opened this document, remove this text and click “Knit”
-above to re-render the document\!
+above to re-render the document\! You may have to install one or more
+packages to re-render the document.
+
+If you’re already good at this, see if you can modify the code below to
+be less repetitive\! There are two plots that are essentially identical
+that *could* be extracted into a single function.
 
 ``` r
 prof_meta <- read.csv("argo_profile_meta.csv")
